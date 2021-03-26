@@ -17,15 +17,15 @@ priv/node_modules: priv/package.json priv/package-lock.json
 	cd priv && npm install
 
 _build/dev: export MIX_ENV = dev
-_build/dev: lib priv config/config.exs config/dev.exs
+_build/dev: lib priv config/config.exs
 	mix compile
 
 _build/test: export MIX_ENV = test
-_build/test: lib priv config/config.exs config/test.exs
+_build/test: lib priv config/config.exs
 	mix compile
 
 _build/prod: export MIX_ENV = prod
-_build/prod: lib priv config/config.exs config/prod.exs
+_build/prod: lib priv config/config.exs
 	mix compile
 
 hex.info:
